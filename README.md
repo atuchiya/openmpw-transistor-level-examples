@@ -1,6 +1,7 @@
-# openmpw-transistor-level-examples
-Author: Akira Tsuchiya (atuchiya)
-License: Apache 2.0
+# Simulation Examples of Transistor-Level Simulation for OpenMPW
+- repository: openmpw-transistor-level-examples
+- Author: Akira Tsuchiya (atuchiya)
+- License: Apache License, Version 2.0
 
 This repository provides examples for transistor-level simulation in OpenMPW program.
 
