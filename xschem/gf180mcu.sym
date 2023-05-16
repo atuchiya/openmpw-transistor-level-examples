@@ -1,0 +1,49 @@
+v {xschem version=3.1.0 file_version=1.0
+}
+G {}
+K {type=netlist_commands
+template="name=CORNER only_toplevel=false corner=typical"
+format="tcleval([
+set gf180mcu_corner(typical) \\"
+.include /foss/pdks/gf180mcuC/libs.tech/ngspice/design.ngspice
+.lib /foss/pdks/gf180mcuC/libs.tech/ngspice/sm141064.ngspice typical
+\\"
+set gf180mcu_corner(sf) \\"
+.include /foss/pdks/gf180mcuC/libs.tech/ngspice/design.ngspice
+.lib /foss/pdks/gf180mcuC/libs.tech/ngspice/sm141064.ngspice sf
+\\"
+set gf180mcu_corner(ff) \\"
+.include /foss/pdks/gf180mcuC/libs.tech/ngspice/design.ngspice
+.lib /foss/pdks/gf180mcuC/libs.tech/ngspice/sm141064.ngspice ff
+\\"
+set gf180mcu_corner(ss) \\"
+.include /foss/pdks/gf180mcuC/libs.tech/ngspice/design.ngspice
+.lib /foss/pdks/gf180mcuC/libs.tech/ngspice/sm141064.ngspice ss
+\\"
+set gf180mcu_corner(fs) \\"
+.include /foss/pdks/gf180mcuC/libs.tech/ngspice/design.ngspice
+.lib /foss/pdks/gf180mcuC/libs.tech/ngspice/sm141064.ngspice fs
+\\"
+return $gf180mcu_corner(@corner\\\\)])"
+}
+V {}
+S {}
+E {}
+L 4 20 30 60 30 {}
+L 4 20 40 40 40 {}
+L 4 20 60 50 60 {}
+L 4 20 70 50 70 {}
+L 4 20 80 90 80 {}
+L 4 20 90 40 90 {}
+L 4 20 20 70 20 {}
+L 4 20 10 40 10 {}
+L 4 100 10 110 10 {}
+L 4 110 10 110 110 {}
+L 4 20 110 110 110 {}
+L 4 20 100 20 110 {}
+L 4 100 0 100 100 {}
+L 4 10 100 100 100 {}
+L 4 10 0 10 100 {}
+L 4 10 0 100 0 {}
+T {Corner: @corner} 5 -25 0 0 0.3 0.3 {}
+T {GF180mcu} 10 40 0 0 0.3 0.3 {}
