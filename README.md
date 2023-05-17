@@ -1,11 +1,9 @@
 # Examples of Transistor-Level Simulation for OpenMPW
-- repository: openmpw-transistor-level-examples
-- Author: Akira Tsuchiya (atuchiya)
-- License: Apache License, Version 2.0
+SPDX-License-Identifier: Apache-2.0 
 
-This repository provides examples for transistor-level simulation in OpenMPW program.
+Copyright 2023 Akira Tsuchiya (atuchiya)
 
-- PDKs: SkyWater 130nm (sky130), GlobalFoundries 180nm MCU (gf180mcu)
-- Tools: Xschem, jupyter notebook on Google Colab
+This repository provides examples of transistor-level simulation for OpenMPW (sky130 and gf180mcu).
+- Xschem on [IIC-OSIC-TOOLS](https://github.com/iic-jku/iic-osic-tools) by JKU.
+- Jupyter-notebook on Google Colab
 
-Note: Xschem schemtics assume IIC-OSIC-TOOLS by JKU.
