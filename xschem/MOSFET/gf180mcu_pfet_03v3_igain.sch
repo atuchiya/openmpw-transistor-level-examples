@@ -193,7 +193,6 @@ lab=VDD}
 C {devices/gnd.sym} 130 -20 0 0 {name=l1 lab=GND}
 C {devices/vsource.sym} -130 -80 0 0 {name=Vgs value=1.65}
 C {devices/vsource.sym} -210 -80 0 0 {name=Vdd value=3.3}
-C {gf180mcu.sym} -140 -430 0 0 {name=CORNER only_toplevel=false corner=typical}
 C {devices/code_shown.sym} 10 40 0 0 {name=control only_toplevel=false value=".option savecurrents
 .control
 save all
@@ -404,3 +403,4 @@ model=pfet_03v3
 spiceprefix=X
 }
 C {devices/vdd.sym} 1250 -480 0 0 {name=l17 lab=VDD}
+C {symbols/gf180mcu.sym} -130 -440 0 0 {name=CORNER only_toplevel=false corner=typical}

@@ -52,7 +52,6 @@ spiceprefix=X
 }
 C {devices/vsource.sym} 30 -90 0 0 {name=Vgs value=0}
 C {devices/vsource.sym} 230 -90 0 0 {name=Vds value=3.3}
-C {gf180mcu.sym} -130 -130 0 0 {name=CORNER only_toplevel=false corner=typical}
 C {devices/code_shown.sym} 10 40 0 0 {name=control only_toplevel=false value=".option savecurrents
 .control
 save all
@@ -62,3 +61,4 @@ plot 1/deriv(log10(-i(vds)))
 wrdata gf180mcu_nfet_03v3_subthreshold_id.txt -i(vds)
 wrdata gf180mcu_nfet_03v3_subthreshold_sfactor.txt 1/deriv(log10(-i(vds)))
 .endc"}
+C {symbols/gf180mcu.sym} -130 -120 0 0 {name=CORNER only_toplevel=false corner=typical}

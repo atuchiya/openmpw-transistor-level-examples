@@ -185,7 +185,7 @@ device="ceramic capacitor"}
 C {devices/lab_pin.sym} 370 -110 3 0 {name=p1 sig_type=std_logic lab=fo4_in}
 C {devices/lab_pin.sym} 590 -110 3 0 {name=p2 sig_type=std_logic lab=fo4_out}
 C {devices/gnd.sym} 800 -40 0 0 {name=l19 lab=GND}
-C {symbols/sky130A_01v8lvt_inv1.sym} 120 -140 0 0 {name=X1}
+C {symbols/sky130A_01v8_inv1.sym} 120 -140 0 0 {name=X1}
 C {devices/vdd.sym} 120 -200 0 0 {name=l3 lab=VDD}
 C {devices/gnd.sym} 120 -40 0 0 {name=l4 lab=GND}
 C {devices/vdd.sym} 260 -200 0 0 {name=l5 lab=VDD}
@@ -266,19 +266,19 @@ value=100f
 footprint=1206
 device="ceramic capacitor"}
 C {devices/gnd.sym} 790 -640 0 0 {name=l39 lab=GND}
-C {symbols/sky130A_01v8lvt_inv1.sym} 260 -140 0 0 {name=X2}
-C {symbols/sky130A_01v8lvt_inv1.sym} 260 -330 0 0 {name=X3}
-C {symbols/sky130A_01v8lvt_inv1.sym} 260 -520 0 0 {name=X4}
-C {symbols/sky130A_01v8lvt_inv1.sym} 260 -710 0 0 {name=X5}
-C {symbols/sky130A_01v8lvt_inv1.sym} 480 -140 0 0 {name=X6}
-C {symbols/sky130A_01v8lvt_inv1.sym} 480 -330 0 0 {name=X7}
-C {symbols/sky130A_01v8lvt_inv1.sym} 480 -520 0 0 {name=X8}
-C {symbols/sky130A_01v8lvt_inv1.sym} 480 -710 0 0 {name=X9}
-C {symbols/sky130A_01v8lvt_inv1.sym} 700 -140 0 0 {name=X10}
-C {symbols/sky130A_01v8lvt_inv1.sym} 700 -330 0 0 {name=X11}
-C {symbols/sky130A_01v8lvt_inv1.sym} 700 -520 0 0 {name=X12}
-C {symbols/sky130A_01v8lvt_inv1.sym} 700 -710 0 0 {name=X13}
 C {devices/code_shown.sym} 10 190 0 0 {name=measure1 only_toplevel=false value=".measure tran trise trig v(fo4_out) val='vdd * 0.8' fall=1 targ v(fo4_out) val='vdd * 0.2' fall=1
 .measure tran tfall trig v(fo4_out) val='vdd * 0.2' rise=1 targ v(fo4_out) val='vdd * 0.8' rise=1
 .measure tran delay_rise trig v(fo4_in) val='vdd * 0.5' fall=1 targ v(fo4_out) val='vdd * 0.5' rise=1
 .measure tran delay_fall trig v(fo4_in) val='vdd * 0.5' rise=1 targ v(fo4_out) val='vdd * 0.5' fall=1"}
+C {symbols/sky130A_01v8_inv1.sym} 260 -140 0 0 {name=X2}
+C {symbols/sky130A_01v8_inv1.sym} 260 -330 0 0 {name=X3}
+C {symbols/sky130A_01v8_inv1.sym} 260 -520 0 0 {name=X4}
+C {symbols/sky130A_01v8_inv1.sym} 260 -710 0 0 {name=X5}
+C {symbols/sky130A_01v8_inv1.sym} 480 -140 0 0 {name=X6}
+C {symbols/sky130A_01v8_inv1.sym} 480 -330 0 0 {name=X7}
+C {symbols/sky130A_01v8_inv1.sym} 480 -520 0 0 {name=X8}
+C {symbols/sky130A_01v8_inv1.sym} 480 -710 0 0 {name=X9}
+C {symbols/sky130A_01v8_inv1.sym} 700 -140 0 0 {name=X10}
+C {symbols/sky130A_01v8_inv1.sym} 700 -330 0 0 {name=X11}
+C {symbols/sky130A_01v8_inv1.sym} 700 -520 0 0 {name=X12}
+C {symbols/sky130A_01v8_inv1.sym} 700 -710 0 0 {name=X13}

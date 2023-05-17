@@ -85,10 +85,7 @@ C {devices/lab_pin.sym} 30 -170 1 0 {name=p3 sig_type=std_logic lab=in}
 C {devices/gnd.sym} 120 -40 0 0 {name=l11 lab=GND}
 C {devices/vdd.sym} 120 -210 0 0 {name=l18 lab=VDD}
 C {devices/gnd.sym} 630 -40 0 0 {name=l19 lab=GND}
-C {symbols/sky130A_01v8lvt_inv1.sym} 120 -150 0 0 {name=X1}
-C {symbols/sky130A_01v8lvt_inv1.sym} 260 -150 0 0 {name=X2}
-C {symbols/sky130A_01v8lvt_inv1.sym} 400 -150 0 0 {name=X3}
-C {symbols/sky130A_01v8lvt_inv1.sym} 540 -150 0 0 {name=X4}
+C {symbols/sky130A_01v8_inv1.sym} 120 -150 0 0 {name=X1}
 C {devices/gnd.sym} 260 -40 0 0 {name=l3 lab=GND}
 C {devices/vdd.sym} 260 -210 0 0 {name=l4 lab=VDD}
 C {devices/gnd.sym} 400 -40 0 0 {name=l5 lab=GND}
@@ -96,8 +93,11 @@ C {devices/vdd.sym} 400 -210 0 0 {name=l6 lab=VDD}
 C {devices/gnd.sym} 540 -40 0 0 {name=l8 lab=GND}
 C {devices/vdd.sym} 540 -210 0 0 {name=l9 lab=VDD}
 C {sky130_fd_pr/corner.sym} -210 -130 0 0 {name=CORNER1 only_toplevel=true corner=tt}
-C {devices/code_shown.sym} -150 -270 0 0 {name=param only_toplevel=false value=".param vdd=1.8"}
 C {devices/code_shown.sym} 10 190 0 0 {name=measure1 only_toplevel=false value=".measure tran trise trig v(fo1_out) val='vdd * 0.8' fall=1 targ v(fo1_out) val='vdd * 0.2' fall=1
 .measure tran tfall trig v(fo1_out) val='vdd * 0.2' rise=1 targ v(fo1_out) val='vdd * 0.8' rise=1
 .measure tran delay_rise trig v(fo1_in) val='vdd * 0.5' fall=1 targ v(fo1_out) val='vdd * 0.5' rise=1
 .measure tran delay_fall trig v(fo1_in) val='vdd * 0.5' rise=1 targ v(fo1_out) val='vdd * 0.5' fall=1"}
+C {symbols/sky130A_01v8_inv1.sym} 260 -150 0 0 {name=X2}
+C {symbols/sky130A_01v8_inv1.sym} 400 -150 0 0 {name=X3}
+C {symbols/sky130A_01v8_inv1.sym} 540 -150 0 0 {name=X4}
+C {devices/code_shown.sym} -160 -280 0 0 {name=param only_toplevel=false value=".param vdd=1.8"}

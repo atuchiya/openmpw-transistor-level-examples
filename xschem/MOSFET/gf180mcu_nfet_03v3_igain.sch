@@ -207,7 +207,6 @@ spiceprefix=X
 }
 C {devices/vsource.sym} -130 -80 0 0 {name=Vgs value=1.65}
 C {devices/vsource.sym} -210 -80 0 0 {name=Vdd value=3.3}
-C {gf180mcu.sym} -140 -430 0 0 {name=CORNER only_toplevel=false corner=typical}
 C {devices/code_shown.sym} 10 40 0 0 {name=control only_toplevel=false value=".option savecurrents
 .control
 save all
@@ -404,3 +403,4 @@ C {devices/vdd.sym} 1240 -230 0 0 {name=l17 lab=VDD}
 C {devices/lab_pin.sym} 1180 -80 0 0 {name=p22 sig_type=std_logic lab=ac_in}
 C {devices/lab_pin.sym} 1240 -490 0 0 {name=p23 sig_type=std_logic lab=vds}
 C {devices/vsource.sym} 1240 -440 2 0 {name=Vds16 value=0}
+C {symbols/gf180mcu.sym} -130 -440 0 0 {name=CORNER only_toplevel=false corner=typical}

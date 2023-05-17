@@ -36,7 +36,6 @@ lab=GND}
 C {devices/gnd.sym} 300 -30 0 0 {name=l1 lab=GND}
 C {devices/vsource.sym} 30 -150 0 0 {name=Vgs value=0.9}
 C {devices/vsource.sym} 230 -110 0 0 {name=Vds value=3.3}
-C {gf180mcu.sym} -130 -130 0 0 {name=CORNER only_toplevel=false corner=typical}
 C {devices/code_shown.sym} 10 40 0 0 {name=control only_toplevel=false value=".option savecurrents
 .control
 save all
@@ -65,3 +64,4 @@ sa=0 sb=0 sd=0
 model=pfet_03v3
 spiceprefix=X
 }
+C {symbols/gf180mcu.sym} -130 -120 0 0 {name=CORNER1 only_toplevel=false corner=typical}

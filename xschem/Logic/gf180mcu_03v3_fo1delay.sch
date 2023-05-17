@@ -23,276 +23,81 @@ N -60 -100 -60 -40 {
 lab=GND}
 N -60 -210 -60 -160 {
 lab=VDD}
-N 190 -150 190 -140 {
+N 630 -150 630 -120 {
 lab=#net1}
-N 190 -160 190 -150 {
-lab=#net1}
-N 130 -110 150 -110 {
-lab=in}
-N 130 -190 130 -110 {
-lab=in}
-N 130 -190 150 -190 {
-lab=in}
-N 190 -110 210 -110 {
-lab=GND}
-N 210 -110 210 -60 {
-lab=GND}
-N 190 -190 210 -190 {
-lab=VDD}
-N 190 -150 250 -150 {
-lab=#net1}
-N 190 -270 190 -220 {
-lab=VDD}
-N 190 -230 210 -230 {
-lab=VDD}
-N 210 -230 210 -190 {
-lab=VDD}
-N 190 -80 190 -40 {
-lab=GND}
-N 190 -60 210 -60 {
-lab=GND}
-N 310 -150 310 -140 {
-lab=fo1_in}
-N 310 -160 310 -150 {
-lab=fo1_in}
-N 250 -110 270 -110 {
-lab=#net1}
-N 250 -190 250 -110 {
-lab=#net1}
-N 250 -190 270 -190 {
-lab=#net1}
-N 310 -110 330 -110 {
-lab=GND}
-N 330 -110 330 -60 {
-lab=GND}
-N 310 -190 330 -190 {
-lab=VDD}
-N 310 -150 370 -150 {
-lab=fo1_in}
-N 310 -270 310 -220 {
-lab=VDD}
-N 310 -230 330 -230 {
-lab=VDD}
-N 330 -230 330 -190 {
-lab=VDD}
-N 310 -80 310 -40 {
-lab=GND}
-N 310 -60 330 -60 {
-lab=GND}
-N 430 -150 430 -140 {
-lab=fo1_out}
-N 430 -160 430 -150 {
-lab=fo1_out}
-N 370 -110 390 -110 {
-lab=fo1_in}
-N 370 -190 370 -110 {
-lab=fo1_in}
-N 370 -190 390 -190 {
-lab=fo1_in}
-N 430 -110 450 -110 {
-lab=GND}
-N 450 -110 450 -60 {
-lab=GND}
-N 430 -190 450 -190 {
-lab=VDD}
-N 430 -150 490 -150 {
-lab=fo1_out}
-N 430 -270 430 -220 {
-lab=VDD}
-N 430 -230 450 -230 {
-lab=VDD}
-N 450 -230 450 -190 {
-lab=VDD}
-N 430 -80 430 -40 {
-lab=GND}
-N 430 -60 450 -60 {
-lab=GND}
-N 550 -150 550 -140 {
-lab=#net2}
-N 550 -160 550 -150 {
-lab=#net2}
-N 490 -110 510 -110 {
-lab=fo1_out}
-N 490 -190 490 -110 {
-lab=fo1_out}
-N 490 -190 510 -190 {
-lab=fo1_out}
-N 550 -110 570 -110 {
-lab=GND}
-N 570 -110 570 -60 {
-lab=GND}
-N 550 -190 570 -190 {
-lab=VDD}
-N 550 -270 550 -220 {
-lab=VDD}
-N 550 -230 570 -230 {
-lab=VDD}
-N 570 -230 570 -190 {
-lab=VDD}
-N 550 -80 550 -40 {
-lab=GND}
-N 550 -60 570 -60 {
-lab=GND}
-N 370 -270 370 -190 {
-lab=fo1_in}
-N 490 -270 490 -190 {
-lab=fo1_out}
-N 550 -150 670 -150 {
-lab=#net2}
-N 670 -150 670 -120 {
-lab=#net2}
-N 670 -60 670 -40 {
+N 630 -60 630 -40 {
 lab=GND}
 N 30 -60 30 -40 {
 lab=GND}
-N 30 -150 130 -150 {
-lab=in}
 N 30 -150 30 -120 {
 lab=in}
 N 30 -170 30 -150 {
 lab=in}
+N 120 -110 120 -40 {
+lab=GND}
+N 120 -210 120 -190 {
+lab=VDD}
+N 260 -110 260 -40 {
+lab=GND}
+N 260 -210 260 -190 {
+lab=VDD}
+N 400 -110 400 -40 {
+lab=GND}
+N 400 -210 400 -190 {
+lab=VDD}
+N 540 -110 540 -40 {
+lab=GND}
+N 540 -210 540 -190 {
+lab=VDD}
+N 30 -150 70 -150 {
+lab=in}
+N 190 -150 210 -150 {
+lab=#net2}
+N 330 -150 350 -150 {
+lab=fo1_in}
+N 470 -150 490 -150 {
+lab=fo1_out}
+N 610 -150 630 -150 {
+lab=#net1}
+N 340 -170 340 -150 {
+lab=fo1_in}
+N 480 -170 480 -150 {
+lab=fo1_out}
 C {devices/code_shown.sym} 10 40 0 0 {name=control only_toplevel=false value=".save all
 .control
-tran 0.02p 600p
+tran 0.02p 2000p
 plot in fo1_in fo1_out
 wrdata gf180mcu_03v3_fo1delay.txt in fo1_in fo1_out
 .endc"}
-C {devices/vsource.sym} -60 -130 0 0 {name=Vdd value=3.3}
-C {devices/code_shown.sym} 10 190 0 0 {name=measure only_toplevel=false value=".measure tran trise trig v(fo1_out) val=2.64 fall=1 targ v(fo1_out) val=0.66 fall=1
-.measure tran tfall trig v(fo1_out) val=0.66 rise=1 targ v(fo1_out) val=2.64 rise=1
-.measure tran delay_rise trig v(fo1_in) val=1.65 fall=1 targ v(fo1_out) val=1.65 rise=1
-.measure tran delay_fall trig v(fo1_in) val=1.65 rise=1 targ v(fo1_out) val=1.65 fall=1"}
+C {devices/vsource.sym} -60 -130 0 0 {name=Vdd value=vdd}
 C {devices/vdd.sym} -60 -210 0 0 {name=l1 lab=VDD}
 C {devices/gnd.sym} -60 -40 0 0 {name=l2 lab=GND}
 C {devices/gnd.sym} 30 -40 0 0 {name=l7 lab=GND}
-C {devices/vsource.sym} 30 -90 0 0 {name=Vin value="pwl 0 0 10p 0 20p 3.3 300p 3.3 310p 0"}
-C {devices/capa.sym} 670 -90 0 0 {name=Cload
+C {devices/vsource.sym} 30 -90 0 0 {name=Vin value="pwl 0 0 10p 0 20p vdd 1000p vdd 1010p 0"}
+C {devices/capa.sym} 630 -90 0 0 {name=Cload
 m=1
 value=100f
 footprint=1206
 device="ceramic capacitor"}
-C {devices/lab_pin.sym} 370 -270 1 0 {name=p1 sig_type=std_logic lab=fo1_in}
-C {devices/lab_pin.sym} 490 -270 1 0 {name=p2 sig_type=std_logic lab=fo1_out}
+C {devices/lab_pin.sym} 340 -170 1 0 {name=p1 sig_type=std_logic lab=fo1_in}
+C {devices/lab_pin.sym} 480 -170 1 0 {name=p2 sig_type=std_logic lab=fo1_out}
 C {devices/lab_pin.sym} 30 -170 1 0 {name=p3 sig_type=std_logic lab=in}
-C {devices/gnd.sym} 190 -40 0 0 {name=l11 lab=GND}
-C {devices/gnd.sym} 310 -40 0 0 {name=l12 lab=GND}
-C {devices/gnd.sym} 430 -40 0 0 {name=l13 lab=GND}
-C {devices/gnd.sym} 550 -40 0 0 {name=l14 lab=GND}
-C {devices/vdd.sym} 550 -270 0 0 {name=l15 lab=VDD}
-C {devices/vdd.sym} 430 -270 0 0 {name=l16 lab=VDD}
-C {devices/vdd.sym} 310 -270 0 0 {name=l17 lab=VDD}
-C {devices/vdd.sym} 190 -270 0 0 {name=l18 lab=VDD}
-C {devices/gnd.sym} 670 -40 0 0 {name=l19 lab=GND}
-C {gf180mcu.sym} -210 -120 0 0 {name=CORNER only_toplevel=false corner=typical}
-C {/foss/pdks/gf180mcuC/libs.tech/xschem/symbols/pfet_03v3.sym} 170 -190 0 0 {name=M1
-L=0.28u
-W=3u
-nf=1
-m=1
-ad="'int((nf+1)/2) * W/nf * 0.18u'"
-pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
-as="'int((nf+2)/2) * W/nf * 0.18u'"
-ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
-nrd="'0.18u / W'" nrs="'0.18u / W'"
-sa=0 sb=0 sd=0
-model=pfet_03v3
-spiceprefix=X
-}
-C {/foss/pdks/gf180mcuC/libs.tech/xschem/symbols/nfet_03v3.sym} 170 -110 0 0 {name=M2
-L=0.28u
-W=1u
-nf=1
-m=1
-ad="'int((nf+1)/2) * W/nf * 0.18u'"
-pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
-as="'int((nf+2)/2) * W/nf * 0.18u'"
-ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
-nrd="'0.18u / W'" nrs="'0.18u / W'"
-sa=0 sb=0 sd=0
-model=nfet_03v3
-spiceprefix=X
-}
-C {/foss/pdks/gf180mcuC/libs.tech/xschem/symbols/pfet_03v3.sym} 290 -190 0 0 {name=M3
-L=0.28u
-W=3u
-nf=1
-m=1
-ad="'int((nf+1)/2) * W/nf * 0.18u'"
-pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
-as="'int((nf+2)/2) * W/nf * 0.18u'"
-ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
-nrd="'0.18u / W'" nrs="'0.18u / W'"
-sa=0 sb=0 sd=0
-model=pfet_03v3
-spiceprefix=X
-}
-C {/foss/pdks/gf180mcuC/libs.tech/xschem/symbols/nfet_03v3.sym} 290 -110 0 0 {name=M4
-L=0.28u
-W=1u
-nf=1
-m=1
-ad="'int((nf+1)/2) * W/nf * 0.18u'"
-pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
-as="'int((nf+2)/2) * W/nf * 0.18u'"
-ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
-nrd="'0.18u / W'" nrs="'0.18u / W'"
-sa=0 sb=0 sd=0
-model=nfet_03v3
-spiceprefix=X
-}
-C {/foss/pdks/gf180mcuC/libs.tech/xschem/symbols/pfet_03v3.sym} 410 -190 0 0 {name=M5
-L=0.28u
-W=3u
-nf=1
-m=1
-ad="'int((nf+1)/2) * W/nf * 0.18u'"
-pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
-as="'int((nf+2)/2) * W/nf * 0.18u'"
-ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
-nrd="'0.18u / W'" nrs="'0.18u / W'"
-sa=0 sb=0 sd=0
-model=pfet_03v3
-spiceprefix=X
-}
-C {/foss/pdks/gf180mcuC/libs.tech/xschem/symbols/nfet_03v3.sym} 410 -110 0 0 {name=M6
-L=0.28u
-W=1u
-nf=1
-m=1
-ad="'int((nf+1)/2) * W/nf * 0.18u'"
-pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
-as="'int((nf+2)/2) * W/nf * 0.18u'"
-ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
-nrd="'0.18u / W'" nrs="'0.18u / W'"
-sa=0 sb=0 sd=0
-model=nfet_03v3
-spiceprefix=X
-}
-C {/foss/pdks/gf180mcuC/libs.tech/xschem/symbols/pfet_03v3.sym} 530 -190 0 0 {name=M7
-L=0.28u
-W=3u
-nf=1
-m=1
-ad="'int((nf+1)/2) * W/nf * 0.18u'"
-pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
-as="'int((nf+2)/2) * W/nf * 0.18u'"
-ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
-nrd="'0.18u / W'" nrs="'0.18u / W'"
-sa=0 sb=0 sd=0
-model=pfet_03v3
-spiceprefix=X
-}
-C {/foss/pdks/gf180mcuC/libs.tech/xschem/symbols/nfet_03v3.sym} 530 -110 0 0 {name=M8
-L=0.28u
-W=1u
-nf=1
-m=1
-ad="'int((nf+1)/2) * W/nf * 0.18u'"
-pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
-as="'int((nf+2)/2) * W/nf * 0.18u'"
-ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
-nrd="'0.18u / W'" nrs="'0.18u / W'"
-sa=0 sb=0 sd=0
-model=nfet_03v3
-spiceprefix=X
-}
+C {devices/gnd.sym} 120 -40 0 0 {name=l11 lab=GND}
+C {devices/vdd.sym} 120 -210 0 0 {name=l18 lab=VDD}
+C {devices/gnd.sym} 630 -40 0 0 {name=l19 lab=GND}
+C {symbols/gf180mcu.sym} -220 -130 0 0 {name=CORNER only_toplevel=false corner=typical}
+C {symbols/gf180mcu_03v3_inv1.sym} 120 -150 0 0 {name=X1}
+C {symbols/gf180mcu_03v3_inv1.sym} 260 -150 0 0 {name=X2}
+C {symbols/gf180mcu_03v3_inv1.sym} 400 -150 0 0 {name=X3}
+C {symbols/gf180mcu_03v3_inv1.sym} 540 -150 0 0 {name=X4}
+C {devices/gnd.sym} 260 -40 0 0 {name=l3 lab=GND}
+C {devices/vdd.sym} 260 -210 0 0 {name=l4 lab=VDD}
+C {devices/gnd.sym} 400 -40 0 0 {name=l5 lab=GND}
+C {devices/vdd.sym} 400 -210 0 0 {name=l6 lab=VDD}
+C {devices/gnd.sym} 540 -40 0 0 {name=l8 lab=GND}
+C {devices/vdd.sym} 540 -210 0 0 {name=l9 lab=VDD}
+C {devices/code_shown.sym} -210 -270 0 0 {name=param only_toplevel=false value=".param vdd=3.3"}
+C {devices/code_shown.sym} 10 190 0 0 {name=measure1 only_toplevel=false value=".measure tran trise trig v(fo1_out) val='vdd * 0.8' fall=1 targ v(fo1_out) val='vdd * 0.2' fall=1
+.measure tran tfall trig v(fo1_out) val='vdd * 0.2' rise=1 targ v(fo1_out) val='vdd * 0.8' rise=1
+.measure tran delay_rise trig v(fo1_in) val='vdd * 0.5' fall=1 targ v(fo1_out) val='vdd * 0.5' rise=1
+.measure tran delay_fall trig v(fo1_in) val='vdd * 0.5' rise=1 targ v(fo1_out) val='vdd * 0.5' fall=1"}

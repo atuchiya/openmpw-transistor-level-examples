@@ -5,24 +5,24 @@ K {type=netlist_commands
 template="name=CORNER only_toplevel=false corner=typical"
 format="tcleval([
 set gf180mcu_corner(typical) \\"
-.include /foss/pdks/gf180mcuC/libs.tech/ngspice/design.ngspice
-.lib /foss/pdks/gf180mcuC/libs.tech/ngspice/sm141064.ngspice typical
+.include %NGSPICE%/%DESIGN%
+.lib %NGSPICE%/%MODEL% typical
 \\"
 set gf180mcu_corner(sf) \\"
-.include /foss/pdks/gf180mcuC/libs.tech/ngspice/design.ngspice
-.lib /foss/pdks/gf180mcuC/libs.tech/ngspice/sm141064.ngspice sf
+.include %NGSPICE%/%DESIGN%
+.lib %NGSPICE%/%MODEL% sf
 \\"
 set gf180mcu_corner(ff) \\"
-.include /foss/pdks/gf180mcuC/libs.tech/ngspice/design.ngspice
-.lib /foss/pdks/gf180mcuC/libs.tech/ngspice/sm141064.ngspice ff
+.include %NGSPICE%/%DESIGN%
+.lib %NGSPICE%/%MODEL% ff
 \\"
 set gf180mcu_corner(ss) \\"
-.include /foss/pdks/gf180mcuC/libs.tech/ngspice/design.ngspice
-.lib /foss/pdks/gf180mcuC/libs.tech/ngspice/sm141064.ngspice ss
+.include %NGSPICE%/%DESIGN%
+.lib %NGSPICE%/%MODEL% ss
 \\"
 set gf180mcu_corner(fs) \\"
-.include /foss/pdks/gf180mcuC/libs.tech/ngspice/design.ngspice
-.lib /foss/pdks/gf180mcuC/libs.tech/ngspice/sm141064.ngspice fs
+.include %NGSPICE%/%DESIGN%
+.lib %NGSPICE%/%MODEL% typical fs
 \\"
 return $gf180mcu_corner(@corner\\\\)])"
 }

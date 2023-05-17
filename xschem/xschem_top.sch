@@ -54,7 +54,6 @@ T {combinational logic
 IO, delay, power} 260 40 0 0 0.5 0.5 {}
 T {flip-flop} 260 200 0 0 0.5 0.5 {}
 T {1.8V} 840 -900 0 0 0.5 0.5 {}
-C {gf180mcu.sym} 1100 650 0 0 {name=CORNER only_toplevel=false corner=typical}
 C {sky130_fd_pr/corner.sym} 630 650 0 0 {name=CORNER1 only_toplevel=true corner=tt}
 C {MOSFET/gf180mcu_nfet_03v3_idvgs.sym} 1060 -760 0 0 {}
 C {MOSFET/gf180mcu_nfet_03v3_idvds.sym} 1060 -650 0 0 {}
@@ -66,9 +65,9 @@ C {MOSFET/gf180mcu_pfet_03v3_subthreshold.sym} 1060 -590 0 0 {}
 C {MOSFET/gf180mcu_nfet_03v3_body.sym} 1060 -430 0 0 {}
 C {MOSFET/gf180mcu_pfet_03v3_body.sym} 1060 -480 0 0 {}
 C {MOSFET/gf180mcu_pfet_03v3_igain.sym} 1060 -370 0 0 {}
-C {Logic/sky130A_fo1delay.sym} 840 130 0 0 {}
-C {Logic/sky130A_fo4delay.sym} 840 180 0 0 {}
-C {Logic/sky130A_inv1_dc.sym} 840 80 0 0 {}
+C {Logic/sky130A_01v8_fo1delay.sym} 840 130 0 0 {}
+C {Logic/sky130A_01v8_fo4delay.sym} 840 180 0 0 {}
+C {Logic/sky130A_01v8_inv1_dc.sym} 840 80 0 0 {}
 C {MOSFET/sky130A_nfet_01v8_idvgs.sym} 850 -760 0 0 {}
 C {MOSFET/sky130A_nfet_01v8_idvds.sym} 850 -650 0 0 {}
 C {MOSFET/sky130A_nfet_01v8_subthreshold.sym} 850 -540 0 0 {}
@@ -95,3 +94,4 @@ C {Logic/sky130A_01v8lvt_inv1_dc.sym} 610 80 0 0 {}
 C {Logic/gf180mcu_03v3_inv1_dc.sym} 1070 80 0 0 {}
 C {Logic/gf180mcu_03v3_fo1delay.sym} 1070 130 0 0 {}
 C {Logic/gf180mcu_03v3_fo4delay.sym} 1070 180 0 0 {}
+C {symbols/gf180mcu.sym} 1090 650 0 0 {name=CORNER only_toplevel=false corner=typical}

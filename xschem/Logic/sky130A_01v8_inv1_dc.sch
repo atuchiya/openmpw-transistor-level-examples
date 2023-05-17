@@ -59,12 +59,11 @@ N 130 -170 150 -170 {
 lab=#net2}
 N 150 -230 150 -170 {
 lab=#net2}
-N 30 -40 30 -30 {}
+N 30 -40 30 -30 {
+lab=GND}
 C {sky130_fd_pr/corner.sym} -120 -120 0 0 {name=CORNER1 only_toplevel=true corner=tt}
 C {devices/vsource.sym} 30 -70 0 0 {name=Vin value=3}
 C {devices/gnd.sym} 30 -30 0 0 {name=l1 lab=GND}
-C {devices/code_shown.sym} -210 -190 0 0 {name=control only_toplevel=false value=".save all
-.dc Vin 0 1.8 0.02"}
 C {devices/lab_pin.sym} 150 -130 2 0 {name=p1 sig_type=std_logic lab=out
 }
 C {devices/vsource.sym} 250 -130 0 0 {name=Vdd value=1.8}
@@ -82,4 +81,12 @@ nf=1 mult=1
 model=nfet_01v8
 spiceprefix=X
 }
-C {devices/code_shown.sym} -110 40 0 0 {name=measure only_toplevel=false value=".measure dc Vth_logic when V(out)=0.9"}
+C {devices/code_shown.sym} 10 40 0 0 {name=control only_toplevel=false value=".option savecurrent
+.control
+save all
+dc Vin 0 1.8 0.02
+plot out
+plot -I(Vdd)
+wrdata sky130A_01v8_inv1_dc.txt out -I(Vdd)
+.endc"}
+C {devices/code_shown.sym} 10 230 0 0 {name=measure only_toplevel=false value=".measure dc Vth_logic when V(out)=0.9"}
