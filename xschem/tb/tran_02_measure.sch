@@ -29,7 +29,7 @@ C {devices/vsource.sym} -160 -80 0 0 {name=Vdd value=vdd}
 C {devices/vsource.sym} 30 -80 0 0 {name=Vin value="pwl (0 0 1n 0 2n vdd 20n vdd 21n 0)"}
 C {devices/gnd.sym} 30 -30 0 0 {name=l3 lab=GND}
 C {devices/lab_pin.sym} 30 -130 0 0 {name=p2 sig_type=std_logic lab=in}
-C {devices/code_shown.sym} 320 -120 0 0 {name=control only_toplevel=false value=".option savecurrents
+C {devices/code_shown.sym} 320 -140 0 0 {name=control only_toplevel=false value=".option savecurrents
 .control
 save all
 tran 10p 50n
@@ -46,7 +46,9 @@ device="ceramic capacitor"}
 C {devices/gnd.sym} 250 -30 0 0 {name=l4 lab=GND}
 C {devices/lab_pin.sym} 250 -130 2 0 {name=p1 sig_type=std_logic lab=out
 }
-C {devices/code_shown.sym} 10 -270 0 0 {name=measure1 only_toplevel=false value=".measure tran trise trig v(out) val='vdd * 0.8' fall=1 targ v(out) val='vdd * 0.2' fall=1
-.measure tran tfall trig v(out) val='vdd * 0.2' rise=1 targ v(out) val='vdd * 0.8' rise=1
+C {devices/code_shown.sym} 10 -300 0 0 {name=measure1 only_toplevel=false value=".measure tran tfall trig v(out) val='vdd * 0.8' fall=1 targ v(out) val='vdd * 0.2' fall=1
+.measure tran trise trig v(out) val='vdd * 0.2' rise=1 targ v(out) val='vdd * 0.8' rise=1
 .measure tran delay_rise trig v(in) val='vdd * 0.5' fall=1 targ v(out) val='vdd * 0.5' rise=1
-.measure tran delay_fall trig v(in) val='vdd * 0.5' rise=1 targ v(out) val='vdd * 0.5' fall=1"}
+.measure tran delay_fall trig v(in) val='vdd * 0.5' rise=1 targ v(out) val='vdd * 0.5' fall=1
+.measure tran vmax max v(out)
+.measure tran vmin min v(out)"}

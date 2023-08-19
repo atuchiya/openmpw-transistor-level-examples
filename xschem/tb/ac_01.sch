@@ -29,7 +29,7 @@ C {devices/vsource.sym} -160 -80 0 0 {name=Vdd value=vdd}
 C {devices/vsource.sym} 40 -80 0 0 {name=Vin value="DC 'vdd/2' AC 1"}
 C {devices/gnd.sym} 40 -30 0 0 {name=l3 lab=GND}
 C {devices/lab_pin.sym} 40 -130 0 0 {name=p2 sig_type=std_logic lab=in}
-C {devices/code_shown.sym} 330 -320 0 0 {name=control only_toplevel=false value=".option savecurrents
+C {devices/code_shown.sym} 330 -350 0 0 {name=control only_toplevel=false value=".option savecurrents
 .control
 save all
 save @M.X1.M1[id]
@@ -39,11 +39,13 @@ let isupply=-i(vdd)
 print 'id * vdd'
 print 'isupply * vdd'
 ac dec 20 10k 10G
+plot V(out)
 plot Vdb(out)
 plot Vp(out)
 .endc"}
-C {devices/code_shown.sym} 330 -50 0 0 {name=measure value=".measure ac Gdc find VdB(out) at=10e3
-.measure ac BW when VdB(out)=1.8 from=10e3"}
+C {devices/code_shown.sym} 330 -60 0 0 {name=measure value=".measure ac Gdc find VdB(out) at=10e3
+.measure ac BW when VdB(out)=1.8 from=10e3
+.measure ac UGF when VdB(out)=0 from=10e3"}
 C {devices/code_shown.sym} -170 -200 0 0 {name=param only_toplevel=false value=".param vdd=1.8"}
 C {/home/tsuchiya/tmp/openmpw-transistor-level-examples/xschem/tb/cs.sym} 90 -130 0 0 {name=X1}
 C {devices/capa.sym} 260 -80 0 0 {name=C1
