@@ -1,4 +1,4 @@
-v {xschem version=3.4.5 file_version=1.2
+v {xschem version=3.4.2 file_version=1.2
 }
 G {}
 K {}
@@ -48,13 +48,13 @@ lab=VDD}
 N 220 -430 230 -430 {
 lab=VDD}
 N 140 -390 180 -390 {
-lab=#net3}
+lab=vb}
 N 220 -360 220 -340 {
-lab=#net3}
+lab=vb}
 N 170 -350 220 -350 {
-lab=#net3}
+lab=vb}
 N 170 -390 170 -350 {
-lab=#net3}
+lab=vb}
 N 100 -150 100 -50 {
 lab=GND}
 N 90 -140 100 -140 {
@@ -62,13 +62,13 @@ lab=GND}
 N 220 -200 220 -130 {
 lab=#net1}
 N 100 -230 180 -230 {
-lab=#net4}
+lab=#net3}
 N 140 -180 220 -180 {
 lab=#net1}
 N 220 -280 220 -260 {
-lab=#net5}
-N 100 -280 100 -210 {
 lab=#net4}
+N 100 -280 100 -210 {
+lab=#net3}
 C {devices/code.sym} -120 -120 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
@@ -80,12 +80,14 @@ value="
 * .lib $::180MCU_MODELS/sm141064.ngspice res_statistical
 "}
 C {devices/gnd.sym} 160 -30 0 0 {name=l1 lab=GND}
-C {devices/code_shown.sym} -280 -310 0 0 {name=control only_toplevel=false value=".control
+C {devices/code_shown.sym} -230 -360 0 0 {name=control only_toplevel=false value=".control
 save all
 dc Vdd 3 3.6 0.1
 plot i(Vi1) i(Vi2)
+plot vb
 dc temp -50 125 5
 plot i(Vi1) i(Vi2)
+plot vb
 .endc"}
 C {devices/vdd.sym} -170 -130 0 0 {name=l2 lab=VDD}
 C {devices/gnd.sym} -170 -30 0 0 {name=l3 lab=GND}
@@ -154,3 +156,4 @@ sa=0 sb=0 sd=0
 model=pfet_03v3
 spiceprefix=X
 }
+C {devices/lab_pin.sym} 170 -350 0 0 {name=p1 sig_type=std_logic lab=vb}
